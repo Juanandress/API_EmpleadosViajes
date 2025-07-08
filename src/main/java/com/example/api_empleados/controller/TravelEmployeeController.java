@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.api_empleados.DTO.EmployeeDTO;
+import com.example.api_empleados.DTO.TravelReportDTO;
 import com.example.api_empleados.service.IExpensiveTravelService;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -20,7 +21,7 @@ public class TravelEmployeeController {
     }
 
     @GetMapping("/report")
-    public Object getReport(){
+    public TravelReportDTO getReport(){
         return expensiveTravelService.getReport();
     }
 }

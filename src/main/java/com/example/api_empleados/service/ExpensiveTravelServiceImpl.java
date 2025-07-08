@@ -37,6 +37,7 @@ public class ExpensiveTravelServiceImpl implements IExpensiveTravelService{
         ArrayList<EmployeeEntity> employees = employeeRepository.findAll();
         String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 
+        employees.sort((e1, e2) -> e1.getNombre().compareToIgnoreCase(e2.getNombre()));
 
         ArrayList<EmployeeTravelSummaryDTO> empleadosResumen = new ArrayList<>();
         for(EmployeeEntity empleado : employees){
