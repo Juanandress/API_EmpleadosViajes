@@ -18,4 +18,9 @@ public class TravelEmployeeController {
     public ArrayList<EmployeeDTO> getEmployees(){
         return expensiveTravelService.getEmployees();
     }
+
+    @GetMapping("/report")
+    public Object getReport(){
+        return expensiveTravelService.getReport();
+    }
 }

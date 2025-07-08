@@ -6,5 +6,5 @@ import com.example.api_empleados.DTO.TravelReportDTO;
 
 public interface IExpensiveTravelService {
     public ArrayList<EmployeeDTO> getEmployees();
-    public ArrayList<TravelReportDTO> getReport();
+    public TravelReportDTO getReport();
 }
