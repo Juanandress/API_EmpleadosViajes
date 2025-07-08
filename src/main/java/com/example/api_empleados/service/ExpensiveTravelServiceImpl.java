@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.api_empleados.DTO.EmployeeDTO;
+import com.example.api_empleados.DTO.TravelReportDTO;
 import com.example.api_empleados.model.EmployeeEntity;
 import com.example.api_empleados.repository.EmployeeRepository;
 
@@ -24,6 +25,11 @@ public class ExpensiveTravelServiceImpl implements IExpensiveTravelService{
         }
         return employeesDTOs;
 
+    }
+
+    @Override
+    public ArrayList<TravelReportDTO> getReport(){
+        return null;
     }
 
 }
