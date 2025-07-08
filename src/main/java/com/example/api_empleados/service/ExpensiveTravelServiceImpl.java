@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.api_empleados.DTO.EmployeeDTO;
+import com.example.api_empleados.DTO.TravelSummaryDTO;
 import com.example.api_empleados.model.EmployeeEntity;
 import com.example.api_empleados.repository.EmployeeRepository;
 
@@ -29,4 +30,21 @@ public class ExpensiveTravelServiceImpl implements IExpensiveTravelService{
         return employeesDTOs;
 
     }
+
+    @Override
+    public ArrayList<TravelSummaryDTO> getSummary() {
+
+        ArrayList<EmployeeEntity> employees = employeeRepository.findAll();
+        ArrayList<TravelSummaryDTO> summary = new ArrayList<>();
+        for (EmployeeEntity employee : employees) {
+            double totalGastos = 100000;
+            String mes = "Prueba"; 
+            String asume = employee.getNombre();
+            TravelSummaryDTO travelSummary = new TravelSummaryDTO(mes, totalGastos, asume);
+            summary.add(travelSummary);
+        }
+        return summary;
+    }
+
+
 }
