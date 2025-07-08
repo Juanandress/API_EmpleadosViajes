@@ -52,15 +52,15 @@ public class EmployeeRepository {
         employee1.addTravel(travel2);
         employee2.addTravel(travel3);
         employee3.addTravel(travel4);
-        employee2.addTravel(travel1);
-        employee6.addTravel(travel2);
-        employee4.addTravel(travel3);
-        employee5.addTravel(travel4);  
-        employee3.addTravel(travel1);
-        employee1.addTravel(travel2);
-        employee2.addTravel(travel3);
-        employee6.addTravel(travel4);  
-        employee3.addTravel(travel1);
+        employee2.addTravel(travel5);
+        employee6.addTravel(travel6);
+        employee4.addTravel(travel7);
+        employee5.addTravel(travel8);  
+        employee3.addTravel(travel9);
+        employee1.addTravel(travel10);
+        employee2.addTravel(travel11);
+        employee6.addTravel(travel12);  
+        employee3.addTravel(travel13);
        
     }
 }
