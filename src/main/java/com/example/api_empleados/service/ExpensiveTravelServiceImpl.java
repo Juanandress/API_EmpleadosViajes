@@ -35,16 +35,17 @@ public class ExpensiveTravelServiceImpl implements IExpensiveTravelService{
         double IVA = 0.19;
         double totalGastosEmpleados = 0;
         ArrayList<EmployeeEntity> employees = employeeRepository.findAll();
-        
+        String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+
 
         ArrayList<EmployeeTravelSummaryDTO> empleadosResumen = new ArrayList<>();
         for(EmployeeEntity empleado : employees){
             Map<String, Double> gastosPorMes = new HashMap<>();
             if(empleado.getViajes() != null) {
                 for (TravelEntity viaje : empleado.getViajes()) {
-                    String mes = viaje.getFechaViaje().getMonth().toString();
+                    String mesNombre = meses[viaje.getFechaViaje().getMonthValue()-1];
                     double totalGasto = viaje.getTotalGasto() * (1 + IVA);
-                    gastosPorMes.put(mes, gastosPorMes.getOrDefault(mes, 0.0) + totalGasto);
+                    gastosPorMes.put(mesNombre, gastosPorMes.getOrDefault(mesNombre, 0.0) + totalGasto);
                     totalGastosEmpleados += totalGasto;
                 }
             }
