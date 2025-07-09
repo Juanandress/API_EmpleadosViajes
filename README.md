@@ -5,6 +5,8 @@
 Este proyecto es una **API REST** desarrollada con **Spring Boot** para la gestión y generación de reportes de gastos de viaje de empleados.
 
 ---
+## Diagrama de clases API
+![](https://github.com/Juanandress/API_EmpleadosViajes/blob/develop/diagrama.PNG)
 
 ## Tecnologías Utilizadas
 
