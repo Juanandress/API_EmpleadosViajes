@@ -24,7 +24,7 @@ Sigue estos pasos para poner en marcha el proyecto localmente:
 1.  **Clonar el Repositorio:**
     Abre tu terminal o línea de comandos y ejecuta el siguiente comando para clonar el proyecto:
     ```bash
-    git clone [https://github.com/Juanandress/API_EmpleadosViajes.git](https://github.com/Juanandress/API_EmpleadosViajes.git)
+    git clone https://github.com/Juanandress/API_EmpleadosViajes.git
     ```
 
 2.  **Compilar el Proyecto:**
